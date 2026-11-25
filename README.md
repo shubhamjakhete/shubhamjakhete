@@ -35,8 +35,8 @@ An NVDA screen reader add-on that labels unlabeled UI elements for blind users. 
 
 An on-device iOS navigation aid for low-vision pedestrians. It runs three YOLO models through Core ML, two of them custom-trained to classify pedestrian signals and find crosswalks. Vision OCR reads walk-signal countdowns, and the app speaks "cross" only after a number is confirmed. Depth Anything V2 estimates distance, with a pinhole camera model between depth frames.
 
-- Pilot with three low-vision participants: all three read the walk-signal state correctly within 10 m
-- One participant struggled with the countdown; the cause was small display text, not OCR error
+- Pilot with 3 low-vision and 2 sighted participants: all three low-vision participants read the walk-signal state correctly within 10 m
+- One low-vision participant struggled with the countdown; the cause was small display text, not OCR error
 - Swift 6 concurrency safe, no third-party dependencies
 
 `Swift 6` `SwiftUI` `Core ML` `YOLO` `Vision` `ARKit`
@@ -51,12 +51,17 @@ A human-in-the-loop checkpoint for AI creative coding. Before any generated p5.j
 
 `TypeScript` `p5.js` `LLM evaluation`
 
-### [Explainable Used Car Recommendation System](https://github.com/shubhamjakhete/esdt_project)
-*Course project (CPSC 583, Knowledge Representation and Reasoning), team of three, 2025*
+### [My Operation Captain](https://github.com/shubhamjakhete/ai-education-prototype)
+*Future Proofing AI for All Learners Workshop, Stanford, Oct 2026 · Developer researcher and prototype builder, Table 5 · With Table 5 teammates · Workshop led by Hari Subramonyam*
 
-An explainable recommender over 5,181 vehicles merged from Kaggle listings, NHTSA crash ratings, and NHTSA complaint data. It combines Prolog expert rules, an RDF/OWL knowledge graph queried with SPARQL, propositional filtering, and a probabilistic reliability estimate, so each result names the rule categories it meets. Data limits are stated openly: about 36% of vehicles had safety ratings and 22% had complaint records.
+A support tool for a student returning to school, designed with the people around them. Our table interviewed special and general education teachers, school district administrators, and the parent of a returning student, then turned the notes into design requirements and an agent specification. I built a TypeScript prototype from that specification with Claude Code. The student starts with a mood check-in, and both the caregiver and the case manager must approve the plan before teachers or the student see it.
 
-`Prolog` `RDF/OWL` `SPARQL` `FastAPI`
+- In testing, the student found the questionnaire too much effort and asked for a low-effort, animated interface that adapts to mood. A personalized tool that is too much work to use is not accessible.
+- Teachers and the parent raised concerns about how much sensitive student data the tool would collect and process. We blocked medical details and required approval from two reviewers.
+- The design grew from a single help card into a full support plan with a mood check-in, revised after feedback from the whole group.
+- The feedback was gathered informally, which showed me why HCI research needs structured methods for weighing competing stakeholder needs.
+
+`Stakeholder interviews` `Participatory design` `Iterative user testing` `Privacy-aware design` `TypeScript` `Claude Code`
 
 ---
 
@@ -87,5 +92,6 @@ Built a monitoring dashboard for a wastewater treatment plant covering 17 sensor
 
 | Project | Description | Stack |
 |---|---|---|
+| [Explainable Used Car Recommendation System](https://github.com/shubhamjakhete/esdt_project) | Recommender over 5,181 vehicles combining Prolog rules, an RDF/OWL knowledge graph queried with SPARQL, and a probabilistic reliability estimate, so each result names the rule categories it meets (CPSC 583, team of three) | Prolog, RDF/OWL, SPARQL, FastAPI |
 | [SmartSky](https://github.com/shubhamjakhete/SmartSky-Flight) | Flight booking platform with a prototype LLM layer that turns natural-language travel queries into structured search parameters | React, Node.js, MongoDB |
 | [Blockchain Disk Space Rental](https://github.com/shubhamjakhete/Blockchain_Disk_Space_Rental) | dApp for listing and renting disk space; a Solidity factory contract deploys one rental contract per listing (team of four) | Solidity, Next.js, Web3.js, Truffle |
